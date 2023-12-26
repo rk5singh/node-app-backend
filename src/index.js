@@ -9,6 +9,10 @@ dotenv.config({
 
 import connectDB from './db/index.js';
 
-connectDB();
+connectDB()
+.then()
+.catch((err) => {
+    console.log(`Mongo DB connection failed: ${err}`);
+})
 
 
